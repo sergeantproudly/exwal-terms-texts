@@ -1,0 +1,154 @@
+@charset "utf-8";
+@import 'reset';
+@import 'fonts';
+@import 'settings';
+
+html, body {
+	width: 100%;
+}
+body{
+	font-family: $font-main;
+	font-weight: 400;
+	line-height: 1.5;
+    font-size: 16px;
+	color: $color-text;
+	text-align: left;
+	box-sizing: border-box;
+	background-color: $color-background;
+
+	@media (max-width: $adaptive-width-mobile) {
+		font-size: 14px;
+	}
+}
+a{
+	color: $color-text-link;
+	text-decoration: none;
+    @extend %transition-opacity;
+    &:hover {
+        opacity: 0.8;
+        @extend %transition-opacity;
+    }
+}
+h1,
+.h1{
+	font-family: $font-main;
+	color: $color-text;	
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-bottom: 24px;
+	cursor: default;
+
+	@media (max-width: $adaptive-width-mobile) {
+		font-size: 24px;
+		margin-bottom: 17px;
+	}
+
+	a {
+		color: $color-text;
+	}
+}
+h2,
+.h2{
+	font-family: $font-main;
+	color: $color-text;	
+	font-size: 21px;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-bottom: 22px;
+	cursor: default;
+}
+h3,
+.h3{
+	font-family: $font-main;
+	color: $color-text;	
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 26px;
+	cursor: default;
+}
+h4,
+.h4{
+	font-family: $font-main;
+	color: $color-text;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 10px;
+	cursor: default;
+}
+h5,
+.h5{
+	font-family: $font-main;
+	color: $color-text;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 10px;
+	cursor: default;
+}
+h6,
+.h6{
+	font-family: $font-main;
+	color: $color-text;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 10px;
+	cursor: default;
+}
+p{
+	margin-bottom: 15px;
+
+	& + h1 {
+		padding-top: 35px;
+	}
+}
+strong {
+	font-weight: 600;
+}
+ol, ul{
+	list-style: none;
+}
+ol {
+	counter-reset: myCounter;
+	padding-left: 10px;
+
+	& > li {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 14px;
+
+		@media (max-width: $adaptive-width-mobile) {
+			margin-bottom: 10px;
+		}
+
+		&:before {
+			counter-increment: myCounter;
+			content:counter(myCounter);
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.65;
+		}
+	}
+}
+
+#layout {
+	background-color: $color-background;
+
+	section {
+		padding: 7% 0;
+
+		ul, ol {
+			margin-bottom: 40px;
+		}
+
+		strong {
+			@media (max-width: $adaptive-width-mobile) {
+				font-size: 15px;
+			}
+		}
+	}
+}

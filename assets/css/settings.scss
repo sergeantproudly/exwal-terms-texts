@@ -1,0 +1,86 @@
+$font-main: 'SF Pro Text', 'Arial';
+$color-background: #424558;
+$color-text: #fff;
+$color-text-link: #f16e5d;
+$adaptive-width-tablet: 1000px;
+$adaptive-width-tablet-middle: 850px;
+$adaptive-width-tablet-small: 600px;
+$adaptive-width-mobile: 540px;
+$padding-edges: 2.34%;
+$padding-edges-tablet: 3.5%;
+$padding-edges-tablet-small: 4.75%;
+$padding-edges-mobile: 5.75%;
+$animation-speed: 0.45s;
+
+%ico {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.holder {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 $padding-edges-mobile;
+}
+%al-left {
+	text-align: right;
+}
+%al-right {
+	text-align: right;
+}
+%al-center {
+	text-align: center;
+}
+%al-top {
+	vertical-align: top !important;
+}
+%al-middle {
+	vertical-align: middle !important;
+}
+%al-bottom {
+	vertical-align: bottom !important;
+}
+%wrap {
+	position: relative;
+}
+%transition-all {
+    -webkit-transition: all $animation-speed ease;
+   	-moz-transition: all $animation-speed ease;
+   	-o-transition: all $animation-speed ease;
+    transition: all $animation-speed ease;
+}
+%transition-color {
+    -webkit-transition: color $animation-speed ease;
+   	-moz-transition: color $animation-speed ease;
+   	-o-transition: color $animation-speed ease;
+    transition: color $animation-speed ease;
+}
+%transition-bg {
+    -webkit-transition: background-color $animation-speed ease;
+   	-moz-transition: background-color $animation-speed ease;
+   	-o-transition: background-color $animation-speed ease;
+    transition: background-color $animation-speed ease;
+}
+%transition-border {
+    -webkit-transition: border-color $animation-speed ease;
+   	-moz-transition: border-color $animation-speed ease;
+   	-o-transition: border-color $animation-speed ease;
+    transition: border-color $animation-speed ease;
+}
+%transition-opacity {
+    -webkit-transition: opacity $animation-speed ease;
+   	-moz-transition: opacity $animation-speed ease;
+   	-o-transition: opacity $animation-speed ease;
+    transition: opacity $animation-speed ease;
+}
+%transition-padding-top {
+	-webkit-transition: padding-top $animation-speed ease;
+   	-moz-transition: padding-top $animation-speed ease;
+   	-o-transition: padding-top $animation-speed ease;
+    transition: padding-top $animation-speed ease;
+}
+%transition-none {
+    -webkit-transition: none;
+   	-moz-transition: none;
+   	-o-transition: none;
+    transition: none;
+}
